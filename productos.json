@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "title": "Almacenamiento SSD",
+    "description": "SSD-SATA-1TB",
+    "code": "003",
+    "price": 50000,
+    "status": true,
+    "stock": 5,
+    "category": "Almacenamientos",
+    "thumbnails": []
+  },
+  {
+    "id": 2,
+    "title": "Almacenamiento SSD",
+    "description": "SSD-SATA-1TB",
+    "code": "003",
+    "price": 50000,
+    "status": true,
+    "stock": 5,
+    "category": "Almacenamientos",
+    "thumbnails": []
+  },
+  {
+    "id": 3,
+    "title": "Almacenamiento SSD",
+    "description": "SSD-SATA-1TB",
+    "code": "003",
+    "price": 50000,
+    "status": true,
+    "stock": 5,
+    "category": "Almacenamientos",
+    "thumbnails": []
+  },
+  {
+    "id": 4,
+    "title": "1",
+    "description": "1",
+    "code": "1",
+    "price": "1",
+    "status": true,
+    "stock": "1",
+    "category": "1",
+    "thumbnails": [
+      "1"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "2",
+    "description": "2",
+    "code": "2",
+    "price": "2",
+    "status": true,
+    "stock": "2",
+    "category": "2",
+    "thumbnails": [
+      "2"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "a",
+    "description": "a",
+    "code": "a",
+    "price": "1",
+    "status": true,
+    "stock": "1",
+    "category": "a",
+    "thumbnails": [
+      "a"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "8",
+    "description": "8",
+    "code": "8",
+    "price": "8",
+    "status": true,
+    "stock": "8",
+    "category": "8",
+    "thumbnails": [
+      "8"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "777",
+    "description": "7",
+    "code": "7",
+    "price": "7",
+    "status": true,
+    "stock": "7",
+    "category": "7",
+    "thumbnails": [
+      "7"
+    ]
+  }
+]
