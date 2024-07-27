@@ -1,10 +1,11 @@
 import express from 'express';
 import { promises as fs } from 'fs';
-import { productos, readProductos } from '../dataManager.js';
 
 const router = express.Router();
+
 let carritos = [];
 let currentCartId = 1;
+let productos = [];
 
 async function readCarritos() {
     try {

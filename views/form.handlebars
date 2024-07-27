@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+</head>
+<body>
+    <h1>Agregar Producto</h1>
+    <form id="productForm">
+        <input type="text" id="title" placeholder="Título" required>
+        <input type="text" id="description" placeholder="Descripción" required>
+        <input type="text" id="code" placeholder="Código" required>
+        <input type="number" id="price" placeholder="Precio" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <input type="text" id="category" placeholder="Categoría" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const form = document.getElementById('productForm');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const product = {
+                id: Date.now(),
+                title: document.getElementById('title').value,
+                description: document.getElementById('description').value,
+                code: document.getElementById('code').value,
+                price: parseFloat(document.getElementById('price').value),
+                stock: parseInt(document.getElementById('stock').value),
+                category: document.getElementById('category').value,
+            };
+
+            socket.emit('addProduct', product);
+            form.reset();
+        });
+    </script>
+</body>
+</html>

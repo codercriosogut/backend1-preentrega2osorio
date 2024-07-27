@@ -1,12 +1,34 @@
 import express from 'express';
-import { productos, readProductos, writeProductos } from '../dataManager.js';
+import { promises as fs } from 'fs';
 
 const router = express.Router();
+
+let productos = [];
 let currentId = 1;
 
-readProductos().then(() => {
-    currentId = productos.length ? Math.max(...productos.map(p => p.id)) + 1 : 1;
-});
+async function readProductos() {
+    try {
+        const data = await fs.readFile('productos.json', 'utf8');
+        productos = JSON.parse(data);
+        currentId = productos.length ? Math.max(...productos.map(p => p.id)) + 1 : 1;
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            await fs.writeFile('productos.json', JSON.stringify([]));
+        } else {
+            console.error("Error al leer el archivo", error);
+        }
+    }
+}
+
+async function writeProductos() {
+    try {
+        await fs.writeFile('productos.json', JSON.stringify(productos, null, 2));
+    } catch (error) {
+        console.error("Error al escribir en el archivo", error);
+    }
+}
+
+readProductos();
 
 router.get('/', (req, res) => {
     res.json(productos);
