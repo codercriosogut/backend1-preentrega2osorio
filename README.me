@@ -1,12 +1,12 @@
 # Proyecto de Gestión de Productos y Carritos
 
-## Tecnologías:
+## Tecnologías
 - Node.js
 - Express
 - Express-Handlebars
 - Socket.io
 
-## Estructura del proyecto:
+## Estructura del proyecto
 - `src/app.js`
 - `src/routes/carts.router.js`
 - `src/routes/products.router.js`
@@ -17,30 +17,27 @@
 - `package.json`
 - `productos.json`
 
-## Instrucciones para iniciar el proyecto:
+## Instrucciones para iniciar el proyecto
 1. Clonar el repositorio:
+   ```
    git clone https://github.com/codercriosogut/backend1-preentrega2osorio.git
-
-2. Navegar al directorio del proyecto:
-   cd .\backend1-preentrega2osorio\
-
-3. Instalar las dependencias:
+   cd backend1-preentrega2osorio
    npm install express express-handlebars socket.io
-
-4. Iniciar el servidor:
    npm start
+   Acceso para agregar productos
+   http://localhost:8080/form
+   Acceso para ver productos en tiempo real
+   http://localhost:8080/realtimeproducts
+   ```
 
-## Acceso para agregar productos:
-- http://localhost:8080/form
+## Persistencia de la información (FileSystem)
+- productos.json
+- carritos.json
 
-## Acceso para ver productos en tiempo real:
-- http://localhost:8080/realtimeproducts
+## Resumen
+- Backend: Configurado con Express, Handlebars, y Socket.io.
+- Frontend: Formulario de productos y vista de productos en tiempo real.
+- Socket.io: Comunicación en tiempo real entre el cliente y el servidor para agregar y eliminar productos.
+   
 
-## Persistencia de la información FileSystem:
-- `productos.json`
-- `carritos.json`
 
-## Resumen:
-- **Backend**: Configurado con Express, Handlebars, y Socket.io.
-- **Frontend**: Formulario de productos y vista de productos en tiempo real.
-- **Socket.io**: Comunicación en tiempo real entre el cliente y el servidor para agregar y eliminar productos.
